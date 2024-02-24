@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct CurrencyInput: View {
+    @Binding var isPickerPresented: Bool
+    
     var currency: Currency
     var amount: Double
     var calculator: (Double) -> Void
@@ -31,6 +33,9 @@ struct CurrencyInput: View {
                     .font(.title2)
             }
             .frame(height: 100)
+            .onTapGesture {
+                isPickerPresented.toggle()
+            }
             
             let topBinding = Binding<Double>(
                 get: {
@@ -53,6 +58,7 @@ struct CurrencyInput: View {
 
 #Preview {
     CurrencyInput(
+        isPickerPresented: .constant(true), 
         currency: .RUR,
         amount: 1000) { _ in }
 }
