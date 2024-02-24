@@ -32,7 +32,17 @@ struct CalculatorView: View {
                 }
                 .frame(height: 100)
                 
-                TextField("", value: $viewModel.topAmount, formatter: numberFormatter)
+                let topBinding = Binding<Double>(
+                    get: {
+                        viewModel.topAmount
+                    },
+                    
+                    set: {
+                        viewModel.setTopAmount($0)
+                    }
+                )
+                
+                TextField("", value: topBinding, formatter: numberFormatter)
                     .font(.largeTitle)
                     .multilineTextAlignment(.trailing)
                     .minimumScaleFactor(0.5)
@@ -50,7 +60,17 @@ struct CalculatorView: View {
                 }
                 .frame(height: 100)
                 
-                TextField("", value: $viewModel.bottomAmount, formatter: numberFormatter)
+                let bottomBinding = Binding<Double>(
+                    get: {
+                        viewModel.bottomAmount
+                    },
+                    
+                    set: {
+                        viewModel.setBottomAmount($0)
+                    }
+                )
+                
+                TextField("", value: bottomBinding, formatter: numberFormatter)
                     .font(.largeTitle)
                     .multilineTextAlignment(.trailing)
                     .minimumScaleFactor(0.5)
