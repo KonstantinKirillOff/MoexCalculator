@@ -11,6 +11,11 @@
 		43F5FE632B81F7D400262290 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F5FE622B81F7D400262290 /* ContentView.swift */; };
 		43F5FE652B81F7D500262290 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43F5FE642B81F7D500262290 /* Assets.xcassets */; };
 		43F5FE682B81F7D500262290 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43F5FE672B81F7D500262290 /* Preview Assets.xcassets */; };
+		43F5FE7D2B889DA400262290 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F5FE7C2B889DA400262290 /* Currency.swift */; };
+		43F5FE7F2B88A02600262290 /* CalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F5FE7E2B88A02600262290 /* CalculatorModel.swift */; };
+		43F5FE812B89FA4B00262290 /* CurrencyAmount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F5FE802B89FA4B00262290 /* CurrencyAmount.swift */; };
+		43F5FE832B8A005200262290 /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F5FE822B8A005200262290 /* CalculatorViewModel.swift */; };
+		43F5FE852B8A05CF00262290 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F5FE842B8A05CF00262290 /* CalculatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		43F5FE622B81F7D400262290 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		43F5FE642B81F7D500262290 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43F5FE672B81F7D500262290 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		43F5FE7C2B889DA400262290 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		43F5FE7E2B88A02600262290 /* CalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorModel.swift; sourceTree = "<group>"; };
+		43F5FE802B89FA4B00262290 /* CurrencyAmount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyAmount.swift; sourceTree = "<group>"; };
+		43F5FE822B8A005200262290 /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
+		43F5FE842B8A05CF00262290 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +61,7 @@
 		43F5FE5F2B81F7D400262290 /* MoexCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				43F5FE862B8A062A00262290 /* CalculatorScreen */,
 				43F5FE602B81F7D400262290 /* MoexCalculatorApp.swift */,
 				43F5FE622B81F7D400262290 /* ContentView.swift */,
 				43F5FE642B81F7D500262290 /* Assets.xcassets */,
@@ -65,6 +76,26 @@
 				43F5FE672B81F7D500262290 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		43F5FE7B2B889D8B00262290 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				43F5FE7C2B889DA400262290 /* Currency.swift */,
+				43F5FE7E2B88A02600262290 /* CalculatorModel.swift */,
+				43F5FE802B89FA4B00262290 /* CurrencyAmount.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		43F5FE862B8A062A00262290 /* CalculatorScreen */ = {
+			isa = PBXGroup;
+			children = (
+				43F5FE7B2B889D8B00262290 /* Models */,
+				43F5FE822B8A005200262290 /* CalculatorViewModel.swift */,
+				43F5FE842B8A05CF00262290 /* CalculatorView.swift */,
+			);
+			path = CalculatorScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +168,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43F5FE7D2B889DA400262290 /* Currency.swift in Sources */,
+				43F5FE852B8A05CF00262290 /* CalculatorView.swift in Sources */,
+				43F5FE812B89FA4B00262290 /* CurrencyAmount.swift in Sources */,
 				43F5FE632B81F7D400262290 /* ContentView.swift in Sources */,
 				43F5FE612B81F7D400262290 /* MoexCalculatorApp.swift in Sources */,
+				43F5FE832B8A005200262290 /* CalculatorViewModel.swift in Sources */,
+				43F5FE7F2B88A02600262290 /* CalculatorModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
