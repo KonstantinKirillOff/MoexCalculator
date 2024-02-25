@@ -19,7 +19,9 @@ struct CurrencyPicker: View {
             }
         }
         .pickerStyle(.wheel)
-        .onChange(of: currency, perform: onChange)
+        .onChange(of: currency) {
+            onChange(currency)
+        }
     }
 }
 
