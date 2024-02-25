@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct CalculatorView: View {
-    @ObservedObject var viewModel: CalculatorViewModel
+    //@ObservedObject var viewModel: CalculatorViewModel
+    @EnvironmentObject var viewModel: CalculatorViewModel
     @State var isPickerPresented = true
     
     var body: some View {
@@ -28,6 +29,10 @@ struct CalculatorView: View {
                 calculator: viewModel.setBottomAmount
             )
         }
+        .foregroundColor(.accentColor)
+        .onTapGesture {
+            hideKeyboard()
+        }
         .sheet(isPresented: $isPickerPresented, content: {
             VStack(spacing: 16) {
                 Spacer()
@@ -38,20 +43,30 @@ struct CalculatorView: View {
                 
                 HStack {
                     CurrencyPicker(currency: $viewModel.topCurrency, onChange: { _ in
-                        
+                        didChangeTopCurrency()
                     })
                     CurrencyPicker(currency: $viewModel.bottomCurrency, onChange: { _ in
-                        
+                        didChangeBottomCurrency()
                     })
                 }
                 
             }.presentationDetents([.fraction(0.3)])
         })
     }
+    
+    private func didChangeTopCurrency() {
+        viewModel.updateTopAmount()
+    }
+    
+    private func didChangeBottomCurrency() {
+        viewModel.updateBottomAmount()
+    }
 }
 
 struct CalculatorView_Previews: PreviewProvider {
     static var previews: some View {
-        CalculatorView(viewModel: CalculatorViewModel())
+        CalculatorView()
     }
 }
+
+
