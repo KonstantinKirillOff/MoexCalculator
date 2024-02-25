@@ -37,6 +37,7 @@
 		43F5FE8A2B8A6F1600262290 /* CurrencyPickerVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPickerVIew.swift; sourceTree = "<group>"; };
 		43F5FE8D2B8A84D000262290 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		43F5FE8F2B8B3F3500262290 /* MoexDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoexDataLoader.swift; sourceTree = "<group>"; };
+		43F5FE922B8B498F00262290 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +70,7 @@
 		43F5FE5F2B81F7D400262290 /* MoexCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				43F5FE922B8B498F00262290 /* Info.plist */,
 				43F5FE862B8A062A00262290 /* CalculatorScreen */,
 				43F5FE602B81F7D400262290 /* MoexCalculatorApp.swift */,
 				43F5FE622B81F7D400262290 /* MainView.swift */,
@@ -351,6 +353,7 @@
 				DEVELOPMENT_TEAM = 5VBQ98K5MQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MoexCalculator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -380,6 +383,7 @@
 				DEVELOPMENT_TEAM = 5VBQ98K5MQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MoexCalculator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

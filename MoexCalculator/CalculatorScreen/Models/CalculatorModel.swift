@@ -10,7 +10,7 @@ import Foundation
 typealias CurrencyRates = [Currency: Double]
 
 struct CalculatorModel {
-    private (set) var currencyRates: CurrencyRates = [.RUR: 1, .CNY: 12]
+    private (set) var currencyRates: CurrencyRates = CurrencyRates()
     
     mutating func setCurrencyRates(_ currencyRates: CurrencyRates) {
         self.currencyRates = currencyRates
